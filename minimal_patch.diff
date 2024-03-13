@@ -1,0 +1,63 @@
+1231c1231
+<   .field public static literal int32 number = int32(0x00011014)
+---
+>   .field public static literal int32 number = int32(0x00020200)
+15334c15334
+<     IL_0007:  ldc.i4     0x11014
+---
+>     IL_0007:  ldc.i4     0x20200
+15447c15447
+<     IL_0013:  call       valuetype FMOD.RESULT FMOD.Studio.System::FMOD_Studio_System_GetLowLevelSystem(native int,
+---
+>     IL_0013:  call       valuetype FMOD.RESULT FMOD.Studio.System::FMOD_Studio_System_GetCoreSystem(native int,
+15927a15928
+>     ldsfld     native int [mscorlib]System.IntPtr::Zero
+15930c15931,15932
+<                                                                                                             valuetype FMOD.Studio._3D_ATTRIBUTES&)
+---
+>                                                                                                             valuetype FMOD.Studio._3D_ATTRIBUTES&,
+>                                                                                                                   native int)
+15943a15946
+>     ldsfld     native int [mscorlib]System.IntPtr::Zero
+15946c15949,15950
+<                                                                                                             valuetype FMOD.Studio._3D_ATTRIBUTES&)
+---
+>                                                                                                             valuetype FMOD.Studio._3D_ATTRIBUTES&,
+>                                                                                                                   native int)
+16430c16434
+<           valuetype FMOD.RESULT  FMOD_Studio_System_GetLowLevelSystem(native int studiosystem,
+---
+>           valuetype FMOD.RESULT  FMOD_Studio_System_GetCoreSystem(native int studiosystem,
+16515c16519,16520
+<                                                                           [out] valuetype FMOD.Studio._3D_ATTRIBUTES& attributes) cil managed preservesig
+---
+>                                                                           [out] valuetype FMOD.Studio._3D_ATTRIBUTES& attributes,
+>                                                                              native int zero) cil managed preservesig
+16521c16526,16527
+<                                                                           valuetype FMOD.Studio._3D_ATTRIBUTES& attributes) cil managed preservesig
+---
+>                                                                           valuetype FMOD.Studio._3D_ATTRIBUTES& attributes,
+>                                                                              native int zero) cil managed preservesig
+17862c17868
+<     IL_001d:  call       valuetype FMOD.RESULT FMOD.Studio.EventInstance::FMOD_Studio_EventInstance_GetParameterValue(native int,
+---
+>     IL_001d:  call       valuetype FMOD.RESULT FMOD.Studio.EventInstance::FMOD_Studio_EventInstance_GetParameterByName(native int,
+17884c17890,17891
+<     IL_001c:  call       valuetype FMOD.RESULT FMOD.Studio.EventInstance::FMOD_Studio_EventInstance_SetParameterValue(native int,
+---
+>     ldc.i4.0
+>     IL_001c:  call       valuetype FMOD.RESULT FMOD.Studio.EventInstance::FMOD_Studio_EventInstance_SetParameterByName(native int,
+17886c17893,17894
+<                                                                                                                       float32)
+---
+>                                                                                                                       float32,
+>                                                                                                                  bool)
+18146c18154
+<           valuetype FMOD.RESULT  FMOD_Studio_EventInstance_SetParameterValue(native int _event,
+---
+>           valuetype FMOD.RESULT  FMOD_Studio_EventInstance_SetParameterByName(native int _event,
+18148c18156,18157
+<                                                                              float32 'value') cil managed preservesig
+---
+>                                                                              float32 'value',
+>                                                                              bool ignoreseekspeed) cil managed preservesig
